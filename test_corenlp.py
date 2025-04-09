@@ -1,4 +1,3 @@
-import pytest
 from textblob import TextBlob
 from nlplogic.corenlp import (
     get_noun_phrases,
@@ -16,6 +15,7 @@ def test_get_noun_phrases():
     assert len(noun_phrases) > 0
     assert all(isinstance(phrase, str) for phrase in noun_phrases)
 
+
 def test_search_wikipedia():
     # Test with a known query
     query = "Golden State Warriors"
@@ -23,6 +23,7 @@ def test_search_wikipedia():
     assert isinstance(results, list)
     assert len(results) > 0
     assert all(isinstance(result, str) for result in results)
+
 
 def test_get_summary():
     # Test with a known Wikipedia page title
@@ -32,6 +33,7 @@ def test_get_summary():
     assert len(summary) > 0
     assert "Golden State Warriors" in summary
 
+
 def test_get_textblob():
     # Test with a known text
     text = "The Golden State Warriors are an American professional basketball team based in San Francisco, California."
@@ -39,5 +41,3 @@ def test_get_textblob():
     assert isinstance(blob, TextBlob)
     assert len(blob.sentences) > 0
     assert len(blob.noun_phrases) > 0
-
-
