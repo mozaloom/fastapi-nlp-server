@@ -1,8 +1,8 @@
-ipython
-textblob
-wikipedia
-fire
-pytest
-pytest-cov
-pylint
-black
+ipython==9.1.0
+textblob==0.19.0
+wikipedia==1.4.0
+fire==0.7.0
+pytest==8.3.5
+pytest-cov==6.1.1
+pylint==3.3.6
+black==25.1.0
